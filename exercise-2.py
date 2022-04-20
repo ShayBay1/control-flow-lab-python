@@ -4,17 +4,20 @@
 # 1. Prompts the user to enter a phrase:
 #      Please enter a word or phrase: 
 
-word = input('please enter a word or phrase: ').upper()
-if word != "quit":
+word = input('please enter a word or phrase: ').lower()
+
+if word != ('quit').lower():
     while not word.isalpha():
+        print(f"{word}, <--- word var in block2")
+        word = input('please enter a word or phrase: ').lower()
         print(f"{word} is not a word/phrase")
-        word = input('please enter a word or phrase: ').upper()
-    while word != "quit":
+    while word != ("quit").lower():
         word.isalpha()
         print(f'that word/phrase is {len(word)} charecters long')
-        word = input('please enter a word or phrase: ').upper()
-else:
-    print('goodbye')
+        word = input('please enter a word or phrase: ').lower()
+        print("goodbye")
+elif word == ('quit').lower():
+    print("goodbye")
      
 
 # 2. Print the following message:
