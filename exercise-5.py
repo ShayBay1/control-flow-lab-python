@@ -3,6 +3,18 @@
 # Write the code that:
 # 1. Calculates and prints the first 50 terms of the fibonacci sequence.
 # 2. Print each term and number as follows:
+number = 0
+term = 0 
+state = 1
+while term < 51:
+    if term < 2:
+        print(f"term: {term} / number {term}")
+    else:
+        next = number + state
+        print(f"term: {term} / number {next}")
+        number = state 
+        state = next 
+    term += 1
 #      term: 0 / number: 0
 #      term: 1 / number: 1
 #      term: 2 / number: 1
